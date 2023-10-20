@@ -4,8 +4,430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="data:image/jpeg;base64,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" alt="" width="40px" height="40px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Certificaciones
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">SCRUM</a></li>
+                      <li><a class="dropdown-item" href="#">ISO</a></li>
+                      <li><a class="dropdown-item" href="#">AGILE</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+         
+          <div class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.pexels.com/photos/3153201/pexels-photo-3153201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/927451/pexels-photo-927451.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/2422286/pexels-photo-2422286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+          </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="text-center">Modalidades</h1>
+            <div class="card-group">
+                <div class="card">
+                  <img src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Presencial</h5>
+                    <p class="card-text">Clases en modalidad presencial</p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://images.pexels.com/photos/1324859/pexels-photo-1324859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Online</h5>
+                    <p class="card-text">Modalidad de autoestudio</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://images.pexels.com/photos/4050333/pexels-photo-4050333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Videoconferencia</h5>
+                    <p class="card-text">Toma clases por medio de zoom con un trainer que va ayudar a resolver tus dudas</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- partners -->
+        <div class="container">
+            <h1 class="text-center">Partners</h1>
+        </div>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          
+            <!-- The slideshow/carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+              
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/f1.png" alt="Los Angeles" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/f2.png" alt="Chicago" class="d-block w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/f3.png" alt="New York" class="d-block w-100">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+    </main>
+    <aside>
+        <h2 class="text-center">Certificaciones</h2>
+        <div class="container">
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">ISO 27001</a>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse1" aria-expanded="false" aria-controls="multiCollapseExample2">Scrum</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse2" aria-expanded="false" aria-controls="multiCollapseExample2">Cyber security</button>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        ¿Qué es y para qué sirve la norma ISO 27001?
+                        Qué es la norma ISO 27001 y para qué sirve? | GSS
+                        La norma ISO 27001 es un estándar internacional que establece los requisitos para la implementación, mantenimiento y mejora continua de un Sistema de Gestión de la Seguridad de la Información (SGSI). Este sistema se utiliza para proteger la confidencialidad, integridad y disponibilidad de la información.
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="collapse multi-collapse1" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        Scrum es un marco de gestión de proyectos de metodología ágil que ayuda a los equipos a estructurar y gestionar el trabajo mediante un conjunto de valores, principios y prácticas.
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse2" id="multiCollapseExample2">
+                      <div class="card card-body">
+                        La ciberseguridad es la práctica de proteger equipos, redes, aplicaciones de software, sistemas críticos y datos de posibles amenazas digitales. Las organizaciones tienen la responsabilidad de proteger los datos para mantener la confianza del cliente y cumplir la normativa.
+                    </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        <!-- frame -->
+        <div class="container">
+            <h1 class="text-center">ISO</h1>
+            <div class="card-group">
+                <div class="card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtCJMiN92xjv5HUw0aeIZQXBuBUKHHKLt34IQRHlNma-bjcJzF43Kl-Bnqxw4kbZCnrg&usqp=CAU" class="card-img-top" alt="..." height="150px">
+                  <div class="card-body">
+                    <h5 class="card-title">ISO 27001 FUNDAMENTOS</h5>
+                    <p class="card-text">Clases en modalidad presencial</p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://www.auditool.org/joomlatools-files/docman-images//22%20-%2007%20-%2016%20-%20copia.jpg" class="card-img-top" alt="..." height="150px">
+                  <div class="card-body">
+                    <h5 class="card-title">ISO 27001 INTERNAL AUDITOR</h5>
+                    <p class="card-text">Modalidad de autoestudio</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://www.tuv-nord.com/typo3temp/assets/_processed_/8/4/csm_af22186675ee821c32feb6243fe1cc8ef0988678-fp-720-300-0-0_8f786c1efd.jpeg" class="card-img-top" alt="..." height="150px">
+                  <div class="card-body">
+                    <h5 class="card-title">ISO 27001 LÍDER AUDITOR</h5>
+                    <p class="card-text">Toma clases por medio de zoom con un trainer que va ayudar a resolver tus dudas</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="container p-5">
+            <h3 class="text-center">Contáctanos</h3>
+          
+                <div class="row justify-content-center">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    
+                      <form>
+                        <div class="mb-3">
+                          <label for="nombre" class="form-label">Ingrese su nombre:</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre">        
+                        </div>
+                        <div class="mb-3">
+                          <label for="clave" class="form-label">Ingrese su correo electrónico:</label>
+                          <input type="text" class="form-control" id="clave" name="clave">
+                        </div>
+                        <div class="mb-3">
+                            <label for="clave" class="form-label">Ingrese su número</label>
+                            <input type="text" class="form-control" id="clave" name="clave">
+                          </div>
+                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                      </form> 
+                    </div>
+                    <!-- <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-5 col-sm-6 col-7"  style="background-color:#bbb">
+                      <h1>Columna 2</h1> 
+                      <p>Esto es una prueba de bootstrap 5.</p>
+                    </div> -->
+                  </div>
+         
+        </div>
+        <!--  end frame-->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-6 col-sm-12 col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.7241252086415!2d-99.18257032565823!3d19.381094442325455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff37ea40107f%3A0xc069eb6c677496d8!2sXT%20NEGOCIO%20Consultor%C3%ADa%20y%20capacitaci%C3%B3n%20en%20TI.!5e0!3m2!1ses-419!2smx!4v1697832002898!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 </body>
 </html>
